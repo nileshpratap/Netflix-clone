@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Navbar from "./Navbar";
 import Banner from "./Banner";
 import Row from "./Row";
 import requests from "./requests";
@@ -9,6 +10,7 @@ import requests from "./requests";
 function App() {
   return (
     <div className="App">
+      <Navbar />
       {/* navbar */}
       <Banner />
       {/* top poster */}
