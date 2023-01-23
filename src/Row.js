@@ -7,7 +7,7 @@ const base_url = "https://image.tmdb.org/t/p/original/";
 // state is way to store varibles in react
 // its a short term memory
 // it disappers when we refresh, but its a good way to store information
-function Row({ title, fetchUrl }) {
+function Row({ title, fetchUrl, isLargeRow }) {
   const [movies, setmovies] = useState([]);
   // here we declared an empty movie array
 
@@ -37,8 +37,11 @@ function Row({ title, fetchUrl }) {
         {movies.map((movie) => {
           return (
             <img
-              className="row_poster"
-              src={`${base_url}${movie.poster_path}`}
+              key={movie.id}
+              className={`row_poster ${isLargeRow && "row_posterLarge"}`}
+              src={`${base_url}${
+                isLargeRow ? movie.poster_path : movie.backdrop_path
+              }`}
               alt={movie.name}
             />
           );
