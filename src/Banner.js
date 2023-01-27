@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "./axios";
 import requests from "./requests";
-import Row from "./Row";
+//import Row from "./Row";
 import "./Banner.css";
 
 function Banner() {
